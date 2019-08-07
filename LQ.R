@@ -36,4 +36,5 @@ lq_changed <- inner_join(lq_changed, geo_code)
 
 ind_code <- distinct(df[, c(2, 5)])
 lq_changed <- inner_join(lq_changed, ind_code)
+lq_changed <- lq_changed[, c(1, 6, 2, 7, 3, 4, 5)]
 write.table(lq_changed, "LQ_Changed.csv",  row.names = F, sep = ",")
